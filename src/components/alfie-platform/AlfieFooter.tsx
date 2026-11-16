@@ -1,5 +1,7 @@
 
 
+import alfieLogo from "@/assets/alfie-logo.png";
+
 /* ---------------- footer ---------------- */
 
 const footerCols = [
@@ -12,9 +14,12 @@ export default function AlfieFooter() {
   return (
     <footer className="border-t border-white/[0.07] py-14">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
-        <p className="max-w-sm text-[14px] leading-relaxed text-white/90">
-          Alfie — Financial intelligence infrastructure for the organizations that handle money. Built by Renda.
-        </p>
+        <div>
+          <img src={alfieLogo} alt="Alfie logo" className="h-9 w-auto" />
+          <p className="mt-4 max-w-sm text-[14px] leading-relaxed text-white/90">
+            Alfie — Financial intelligence infrastructure for the organizations that handle money. Built by Renda.
+          </p>
+        </div>
         {footerCols.map((col) => (
           <div key={col.title}>
             <p className="text-[14px] font-medium text-white">{col.title}</p>

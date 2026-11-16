@@ -40,7 +40,7 @@ export default function DataToDecisions() {
               key={step.title}
               className="rounded-2xl border border-white/[0.07] bg-white/[0.03] p-6 transition-colors hover:border-white/[0.12] hover:bg-white/[0.05]"
             >
-              <p className="text-[13px] font-medium tracking-wide text-[#7BE0A5]">{step.num}</p>
+              <p className="text-[13px] font-medium tracking-wide text-[#00F6FF]">{step.num}</p>
               <p className="mt-4 text-xl font-medium text-white">{step.title}</p>
               <p className="mt-3 text-[15px] leading-relaxed text-white/90">{step.text}</p>
             </div>

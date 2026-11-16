@@ -62,7 +62,7 @@ export default function ChatDemo() {
           showAnswer ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
         }`}
       >
-        <p className="text-[13px] font-medium tracking-wide text-[#7BE0A5]">Alfie</p>
+        <p className="text-[13px] font-medium tracking-wide text-[#00F6FF]">Alfie</p>
         <p className="mt-2 text-[15px] leading-relaxed text-white/90">{demoScript[step].a}</p>
       </div>
       <p className="mt-3 text-[13px] text-white/90">Coming soon.</p>

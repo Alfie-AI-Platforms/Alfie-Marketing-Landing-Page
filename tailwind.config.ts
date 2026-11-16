@@ -88,6 +88,8 @@ export default {
   		'accent-peach': 'hsl(var(--accent-peach))',
   		'accent-blue': 'hsl(var(--accent-blue))',
   		'brand-orange': 'hsl(var(--brand-orange))',
+		'alfie-cyan': 'hsl(var(--alfie-cyan))',
+		'alfie-teal': 'hsl(var(--alfie-teal))',
 
   		'hero-gradient': {
   			start: 'hsl(var(--hero-gradient-start))',
