@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Reveal } from "./Reveal";
-import capIntelligence from "@/assets/alfie-cap-intelligence.jpg";
-import capAssistant from "@/assets/alfie-cap-assistant.jpg";
-import capActions from "@/assets/alfie-cap-actions.jpg";
-import capPlatform from "@/assets/alfie-cap-platform.jpg";
+import capIntelligence from "@/assets/grad-aurora-pink.jpg";
+import capAssistant from "@/assets/grad-aurora-mint.jpg";
+import capActions from "@/assets/grad-sunset.jpg";
+import capPlatform from "@/assets/grad-wave-pink.jpg";
 
 /* ---------------- capabilities carousel ---------------- */
 

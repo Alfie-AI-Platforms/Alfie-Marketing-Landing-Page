@@ -1,10 +1,10 @@
 import { useCallback, useEffect, useState } from "react";
 import { Reveal } from "./Reveal";
 import { useInView } from "@/hooks/use-in-view";
-import orgFinancial from "@/assets/alfie-org-financial.jpg";
-import orgInsurance from "@/assets/alfie-org-insurance.jpg";
-import orgEnterprise from "@/assets/alfie-org-enterprise.jpg";
-import orgGovernment from "@/assets/alfie-org-government.jpg";
+import orgFinancial from "@/assets/grad-soft.jpg";
+import orgInsurance from "@/assets/grad-aurora-pink.jpg";
+import orgEnterprise from "@/assets/grad-aurora-mint.jpg";
+import orgGovernment from "@/assets/grad-sunset.jpg";
 
 /* ---------------- organizations showcase ---------------- */
 
@@ -20,18 +20,21 @@ const organizations = [
     text: "Better financial evidence. More informed decisions.",
     details: "Underwriting and claims processes depend on understanding complex financial information. Alfie analyzes statements, documents, and transaction histories, extracts relevant information, identifies patterns, and produces traceable findings with supporting evidence. This helps reduce manual review, improve consistency, and support more informed decisions while maintaining an auditable record.",
     image: orgInsurance,
+    flip: true,
   },
   {
     name: "Enterprise",
     text: "Complex financial operations, easier to understand and act on.",
     details: "Finance teams operate across ledgers, banks, entities, and spreadsheets. Alfie connects financial information across these environments to support reconciliation, identify anomalies, answer questions in natural language, and prepare or initiate authorized workflows. It gives organizations a more connected view of their financial operations and helps teams move from analysis to action.",
     image: orgEnterprise,
+    flip: true,
   },
   {
     name: "Government",
     text: "Financial analysis at scale, with intelligent workflows.",
     details: "Government organizations manage complex financial information across departments, programs, and public services. Alfie helps review, classify, reconcile, and explain financial activity at scale, supporting analysis, reporting, and operational workflows. Its architecture can support deployment, data residency, access controls, and audit requirements appropriate to regulated public-sector environments.",
     image: orgGovernment,
+    flip: true,
   },
 ];
 
@@ -101,7 +104,7 @@ export default function Organizations() {
                   }`}
                   aria-hidden={hovered !== i}
                 >
-                  <img src={org.image} alt={org.name} className="h-full w-full object-cover" loading="lazy" />
+                  <img src={org.image} alt={org.name} className={`h-full w-full object-cover ${org.flip ? "-scale-x-100" : ""}`} loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#000000]/90 to-transparent" />
                   <p className="absolute bottom-7 left-7 right-7 text-lg leading-relaxed text-primary-foreground/90">
                     {org.text}
@@ -121,7 +124,7 @@ export default function Organizations() {
               <img
                 src={organizations[expanded].image}
                 alt={organizations[expanded].name}
-                className="h-[320px] w-full object-cover md:h-[560px]"
+                className={`h-[320px] w-full object-cover md:h-[560px] ${organizations[expanded].flip ? "-scale-x-100" : ""}`}
               />
             </div>
             <p className="mt-8 max-w-3xl text-lg leading-relaxed text-primary-foreground/90">{organizations[expanded].details}</p>
