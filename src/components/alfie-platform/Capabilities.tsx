@@ -42,10 +42,10 @@ export default function Capabilities() {
     <section id="capabilities" className="scroll-mt-20 py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal>
-          <h2 className="text-3xl font-semibold tracking-tight text-black md:text-4xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">
             Alfie: One layer. Four ways to build with it.
           </h2>
-          <p className="mt-5 max-w-2xl text-lg text-black/70">
+          <p className="mt-5 max-w-2xl text-lg text-white/90">
             Intelligence for your products. Infrastructure for your teams. Every capability shares the same financial
             understanding underneath.
           </p>
@@ -79,7 +79,7 @@ export default function Capabilities() {
               type="button"
               onClick={() => setActive(i)}
               className={`text-[15px] transition-colors ${
-                active === i ? "text-black underline decoration-[#03484B] decoration-2 underline-offset-8" : "text-black/55 hover:text-black"
+                active === i ? "text-white" : "text-white/90 hover:text-white"
               }`}
             >
               {cap.title}

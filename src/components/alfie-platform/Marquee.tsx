@@ -15,11 +15,11 @@ const marqueeItems = [
 
 export default function Marquee() {
   return (
-    <section className="border-y border-black/[0.08] py-6">
+    <section className="border-y border-white/[0.07] py-6">
       <div className="relative flex overflow-hidden">
         <div className="flex shrink-0 animate-[alfie-marquee_38s_linear_infinite] items-center gap-14 pr-14">
           {[...marqueeItems, ...marqueeItems].map((item, i) => (
-            <span key={i} className="whitespace-nowrap text-[17px] text-black/55">
+            <span key={i} className="whitespace-nowrap text-[17px] text-white/90">
               {item}
             </span>
           ))}
@@ -29,7 +29,7 @@ export default function Marquee() {
           className="flex shrink-0 animate-[alfie-marquee_38s_linear_infinite] items-center gap-14 pr-14"
         >
           {[...marqueeItems, ...marqueeItems].map((item, i) => (
-            <span key={`b-${i}`} className="whitespace-nowrap text-[17px] text-black/55">
+            <span key={`b-${i}`} className="whitespace-nowrap text-[17px] text-white/90">
               {item}
             </span>
           ))}

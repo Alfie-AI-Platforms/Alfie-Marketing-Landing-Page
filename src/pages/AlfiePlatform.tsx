@@ -7,8 +7,8 @@ import Organizations from "@/components/alfie-platform/Organizations";
 import BuildWithAlfieCTA from "@/components/alfie-platform/BuildWithAlfieCTA";
 import AlfieFooter from "@/components/alfie-platform/AlfieFooter";
 
-const SF_PRO = '"Inter Variable", Inter, -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Helvetica Neue", Arial, sans-serif';
-const BG = "#FFFFFF";
+const SF_PRO = '-apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "SF Pro", system-ui, "Helvetica Neue", Arial, sans-serif';
+const BG = "#000000";
 
 /* ---------------- page ---------------- */
 

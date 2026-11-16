@@ -27,10 +27,10 @@ const dataSteps = [
 
 export default function DataToDecisions() {
   return (
-    <section className="scroll-mt-20 border-t border-black/[0.08] py-24 md:py-32">
+    <section className="scroll-mt-20 border-t border-white/[0.07] py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal>
-          <h2 className="text-3xl font-semibold tracking-tight text-black md:text-4xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">
             From raw financial data to defensible decisions.
           </h2>
         </Reveal>
@@ -38,11 +38,11 @@ export default function DataToDecisions() {
           {dataSteps.map((step) => (
             <div
               key={step.title}
-              className="rounded-2xl border border-black/[0.08] bg-black/[0.02] p-6 transition-colors hover:border-black/[0.16] hover:bg-black/[0.04]"
+              className="rounded-2xl border border-white/[0.07] bg-white/[0.03] p-6 transition-colors hover:border-white/[0.12] hover:bg-white/[0.05]"
             >
-              <p className="text-[13px] font-medium tracking-wide text-[#03484B]">{step.num}</p>
-              <p className="mt-4 text-xl font-medium text-black">{step.title}</p>
-              <p className="mt-3 text-[15px] leading-relaxed text-black/70">{step.text}</p>
+              <p className="text-[13px] font-medium tracking-wide text-[#00F6FF]">{step.num}</p>
+              <p className="mt-4 text-xl font-medium text-white">{step.title}</p>
+              <p className="mt-3 text-[15px] leading-relaxed text-white/90">{step.text}</p>
             </div>
           ))}
         </div>

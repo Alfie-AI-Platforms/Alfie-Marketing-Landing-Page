@@ -39,8 +39,8 @@
     --brand-orange: 36.5 100% 46.1%;
     --alfie-cyan: 187 100% 50%;
     --alfie-teal: 183 92% 15%;
-    --alfie-image-stroke: 0 0% 0% / 0.1;
-    --alfie-image-glow: 0 0% 0% / 0.08;
+    --alfie-image-stroke: 0 0% 100% / 0.3;
+    --alfie-image-glow: 0 0% 100% / 0.1;
 
 
     --surface-dark: 0 0% 98%;
