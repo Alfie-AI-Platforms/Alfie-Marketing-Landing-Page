@@ -1,4 +1,5 @@
 import { Reveal } from "./Reveal";
+import { Link } from "@/lib/router";
 
 /* ---------------- build with alfie cta ---------------- */
 
@@ -20,10 +21,12 @@ export default function BuildWithAlfieCTA() {
               We are working with a small group of organizations ahead of launch.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-4">
-              <span className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-5 py-2.5 text-[14px] font-medium text-white transition-colors hover:bg-white/[0.08]">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-5 py-2.5 text-[14px] font-medium text-white transition-colors hover:bg-white/[0.08]"
+              >
                 Talk to us
-              </span>
-              <span className="text-[13px] text-white/90">Coming soon.</span>
+              </Link>
             </div>
           </div>
         </Reveal>
