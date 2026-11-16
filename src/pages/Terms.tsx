@@ -23,7 +23,7 @@ export default function Terms() {
       <InfoSection id="questions" title="Questions">
         <p>
           For any question about these terms:{" "}
-          <Link to="/contact" className="text-white underline decoration-white/40 underline-offset-4 hover:decoration-white">
+          <Link to="/contact" className="text-black underline decoration-black/30 underline-offset-4 hover:decoration-black">
             talk to us
           </Link>
           .

@@ -55,11 +55,11 @@ export default function Organizations() {
   }, [expanded, close]);
 
   return (
-    <section id="organizations" className="scroll-mt-20 border-t border-white/[0.07] py-24 md:py-32">
+    <section id="organizations" className="scroll-mt-20 border-t border-black/[0.08] py-24 md:py-32">
       <div ref={ref} className="mx-auto max-w-7xl px-6">
         <div className="overflow-hidden">
           <h2
-            className="max-w-3xl text-3xl font-semibold leading-tight tracking-tight text-white transition-all duration-[1100ms] ease-[cubic-bezier(0.16,1,0.3,1)] md:text-4xl"
+            className="max-w-3xl text-3xl font-semibold leading-tight tracking-tight text-black transition-all duration-[1100ms] ease-[cubic-bezier(0.16,1,0.3,1)] md:text-4xl"
             style={{
               transform: inView ? "translateX(0)" : "translateX(-8%)",
               opacity: inView ? 1 : 0,
@@ -70,14 +70,14 @@ export default function Organizations() {
           </h2>
         </div>
         <Reveal delay={200}>
-          <p className="mt-5 max-w-xl text-lg text-white/90">
+          <p className="mt-5 max-w-xl text-lg text-black/70">
             Select an organization to see how the intelligence layer applies.
           </p>
         </Reveal>
 
         {expanded === null ? (
           <div className="mt-14 grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-start">
-            <div className="border-t border-white/[0.07]">
+            <div className="border-t border-black/[0.08]">
               {organizations.map((org, i) => (
                 <button
                   key={org.name}
@@ -85,12 +85,12 @@ export default function Organizations() {
                   onMouseEnter={() => setHovered(i)}
                   onFocus={() => setHovered(i)}
                   onClick={() => setExpanded(i)}
-                  className={`flex w-full items-center justify-between border-b border-white/[0.07] py-6 text-left transition-colors ${
-                    hovered === i ? "text-white" : "text-white/90"
+                  className={`flex w-full items-center justify-between border-b border-black/[0.08] py-6 text-left transition-colors ${
+                    hovered === i ? "text-black" : "text-black/60"
                   }`}
                 >
                   <span className="text-xl font-medium md:text-2xl">{org.name}</span>
-                  <span className="text-[13px] text-white/90">0{i + 1}</span>
+                  <span className="text-[13px] text-black/45">0{i + 1}</span>
                 </button>
               ))}
             </div>
@@ -119,7 +119,7 @@ export default function Organizations() {
             onClick={close}
             role="presentation"
           >
-            <h3 className="text-2xl font-semibold text-white md:text-4xl">{organizations[expanded].name}</h3>
+            <h3 className="text-2xl font-semibold text-black md:text-4xl">{organizations[expanded].name}</h3>
             <div className="alfie-image-frame relative mt-8 overflow-hidden rounded-2xl">
               <img
                 src={organizations[expanded].image}
@@ -127,7 +127,7 @@ export default function Organizations() {
                 className={`h-[320px] w-full object-cover md:h-[560px] ${organizations[expanded].flip ? "-scale-x-100" : ""}`}
               />
             </div>
-            <p className="mt-8 max-w-3xl text-lg leading-relaxed text-primary-foreground/90">{organizations[expanded].details}</p>
+            <p className="mt-8 max-w-3xl text-lg leading-relaxed text-black/75">{organizations[expanded].details}</p>
           </div>
         )}
       </div>

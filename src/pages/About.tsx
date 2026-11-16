@@ -15,10 +15,10 @@ export default function About() {
       </InfoSection>
       <InfoSection id="layers" title="One layer, four ways to build with it">
         <p>
-          <span className="text-white">Intelligence</span>: financial context, analysis, reasoning, forecasting and
-          insights. <span className="text-white">Assistant</span>: conversational financial intelligence for customers
-          and employees. <span className="text-white">Actions</span>: intelligence connected to authorized workflows
-          and systems. <span className="text-white">Platform</span>: APIs, SDKs, integrations and infrastructure for
+          <span className="font-medium text-black">Intelligence</span>: financial context, analysis, reasoning, forecasting and
+          insights. <span className="font-medium text-black">Assistant</span>: conversational financial intelligence for customers
+          and employees. <span className="font-medium text-black">Actions</span>: intelligence connected to authorized workflows
+          and systems. <span className="font-medium text-black">Platform</span>: APIs, SDKs, integrations and infrastructure for
           building with Alfie. Every capability shares the same financial understanding underneath.
         </p>
       </InfoSection>

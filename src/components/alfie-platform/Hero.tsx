@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import heroImage from "@/assets/grad-hero.jpg";
+import bannerWash from "@/assets/grad-soft.jpg";
 import RollingHeadline from "./RollingHeadline";
 import ChatDemo from "./ChatDemo";
 import { Reveal } from "./Reveal";
@@ -23,11 +24,18 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="pt-36 md:pt-44">
-      <div className="mx-auto flex max-w-7xl flex-col items-center px-6 text-center">
+    <section className="relative overflow-hidden pt-36 md:pt-44">
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-[620px]">
+        <img
+          src={bannerWash}
+          alt=""
+          className="h-full w-full object-cover opacity-70 [mask-image:linear-gradient(to_bottom,black_30%,transparent_95%)]"
+        />
+      </div>
+      <div className="relative mx-auto flex max-w-7xl flex-col items-center px-6 text-center">
         <RollingHeadline text={["The intelligence layer for financial", "systems."]} />
         <Reveal delay={200}>
-          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-[#E0E0E0]">
+          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-black/70">
             Alfie gives organizations the ability to understand financial information, reason across complex financial
             context, and turn intelligence into action.
           </p>
@@ -36,7 +44,7 @@ export default function Hero() {
           <ChatDemo />
         </Reveal>
         <Reveal delay={420}>
-          <p className="mt-10 text-[14px] text-white/90">
+          <p className="mt-10 text-[14px] text-black/60">
             For financial institutions, fintechs, enterprises, and government.
           </p>
         </Reveal>
@@ -51,7 +59,7 @@ export default function Hero() {
               alt="Financial intelligence infrastructure"
               className="h-full w-full object-cover will-change-transform"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#000000] via-transparent to-[#000000]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-white/50" />
           </div>
         </div>
       </Reveal>

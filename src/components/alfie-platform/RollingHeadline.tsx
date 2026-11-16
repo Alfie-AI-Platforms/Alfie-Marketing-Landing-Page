@@ -15,7 +15,7 @@ export default function RollingHeadline({ text }: RollingHeadlineProps) {
   return (
     <h1
       ref={ref}
-      className="max-w-6xl text-4xl font-semibold leading-[1.08] tracking-tight text-white md:text-5xl lg:text-[60px]"
+      className="max-w-6xl text-4xl font-semibold leading-[1.08] tracking-tight text-black md:text-5xl lg:text-[60px]"
     >
       {lines.map((line, lineIdx) => (
         <span key={`line-${lineIdx}`} className="block">

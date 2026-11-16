@@ -53,17 +53,17 @@ const footerCols: { title: string; links: { label: string; to?: string; href?: s
 
 export default function AlfieFooter() {
   return (
-    <footer className="border-t border-white/[0.07] py-14">
+    <footer className="border-t border-black/[0.08] py-14">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-3 xl:grid-cols-[1.4fr_1fr_1fr_1fr_1fr_1fr]">
         <div>
           <img src={alfieLogo} alt="Alfie logo" className="h-9 w-auto" />
-          <p className="mt-4 max-w-sm text-[14px] leading-relaxed text-white/90">
+          <p className="mt-4 max-w-sm text-[14px] leading-relaxed text-black/70">
             Alfie: financial intelligence infrastructure for the organizations that handle money. Built by Renda.
           </p>
         </div>
         {footerCols.map((col) => (
           <div key={col.title}>
-            <p className="text-[14px] font-medium text-white">{col.title}</p>
+            <p className="text-[14px] font-medium text-black">{col.title}</p>
             <ul className="mt-4 space-y-3">
               {col.links.map((link) => (
                 <li key={link.label}>
@@ -72,12 +72,12 @@ export default function AlfieFooter() {
                       href={link.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-[14px] text-white/90 transition-colors hover:text-white"
+                      className="text-[14px] text-black/65 transition-colors hover:text-black"
                     >
                       {link.label}
                     </a>
                   ) : (
-                    <Link to={link.to ?? "/"} className="text-[14px] text-white/90 transition-colors hover:text-white">
+                    <Link to={link.to ?? "/"} className="text-[14px] text-black/65 transition-colors hover:text-black">
                       {link.label}
                     </Link>
                   )}
@@ -88,10 +88,10 @@ export default function AlfieFooter() {
         ))}
       </div>
       <div className="mx-auto mt-12 max-w-7xl px-6">
-        <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/[0.07] pt-6">
-          <p className="text-[13px] text-white/90">© 2026 Alfie. All rights reserved.</p>
-          <p className="flex items-center gap-2 text-[13px] text-white/90">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#00F6FF]" />
+        <div className="flex flex-wrap items-center justify-between gap-4 border-t border-black/[0.08] pt-6">
+          <p className="text-[13px] text-black/60">© 2026 Alfie. All rights reserved.</p>
+          <p className="flex items-center gap-2 text-[13px] text-black/60">
+            <span className="alfie-gradient h-1.5 w-1.5 rounded-full" />
             Currently in development. Coming soon.
           </p>
         </div>

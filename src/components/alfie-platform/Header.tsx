@@ -52,7 +52,7 @@ function Dropdown({ label, items }: { label: string; items: NavItem[] }) {
     <div className="group relative flex h-14 items-center">
       <button
         type="button"
-        className="flex items-center gap-1.5 transition-colors hover:text-white"
+        className="flex items-center gap-1.5 transition-colors hover:text-black"
         aria-haspopup="true"
       >
         {label}
@@ -61,12 +61,12 @@ function Dropdown({ label, items }: { label: string; items: NavItem[] }) {
         </svg>
       </button>
       <div className="invisible absolute left-0 top-full z-50 pt-1 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-        <div className="min-w-56 rounded-xl border border-white/10 bg-[#0A0A0A] p-2 shadow-2xl">
+        <div className="min-w-56 rounded-xl border border-black/[0.08] bg-white p-2 shadow-[0_16px_50px_-12px_rgba(0,0,0,0.25)]">
           {items.map((item) => (
             <Link
               key={item.label}
               to={item.to}
-              className="block rounded-lg px-3 py-2 text-[14px] text-white/85 transition-colors hover:bg-white/[0.06] hover:text-white"
+              className="block rounded-lg px-3 py-2 text-[14px] text-black/75 transition-colors hover:bg-black/[0.04] hover:text-black"
             >
               {item.label}
             </Link>
@@ -79,18 +79,18 @@ function Dropdown({ label, items }: { label: string; items: NavItem[] }) {
 
 export default function Header() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/[0.07] bg-[#000000]/80 backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-black/[0.08] bg-white/80 backdrop-blur-xl">
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-6">
-        <Link to="/" className="flex items-center gap-2 text-[17px] font-semibold tracking-tight text-white">
+        <Link to="/" className="flex items-center gap-2 text-[17px] font-semibold tracking-tight text-black">
           <img src={alfieLogo} alt="Alfie logo" className="h-6 w-auto" />
           Alfie
         </Link>
-        <nav className="flex items-center gap-6 text-[15px] text-white/90">
+        <nav className="flex items-center gap-6 text-[15px] text-black/70">
           <div className="hidden items-center gap-6 lg:flex">
             {menus.slice(0, 2).map((menu) => (
               <Dropdown key={menu.label} label={menu.label} items={menu.items} />
             ))}
-            <Link to="/developers" className="transition-colors hover:text-white">
+            <Link to="/developers" className="transition-colors hover:text-black">
               Developers
             </Link>
             {menus.slice(2).map((menu) => (
@@ -99,7 +99,7 @@ export default function Header() {
           </div>
           <Link
             to="/contact"
-            className="rounded-full bg-white px-4 py-1.5 text-[13px] font-medium text-black transition-colors hover:bg-white/85"
+            className="rounded-full bg-black px-4 py-1.5 text-[13px] font-medium text-white transition-colors hover:bg-black/80"
           >
             Talk to us
           </Link>

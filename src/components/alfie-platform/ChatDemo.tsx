@@ -48,24 +48,24 @@ export default function ChatDemo() {
       <div
         onMouseEnter={() => setFocused(true)}
         onMouseLeave={() => setFocused(false)}
-        className={`flex items-center gap-3 rounded-2xl border bg-white/[0.04] px-5 py-4 transition-all duration-500 ${
-          focused ? "border-white/25 shadow-[0_0_40px_-12px_rgba(255,255,255,0.35)]" : "border-white/10"
+        className={`flex items-center gap-3 rounded-2xl border bg-white px-5 py-4 transition-all duration-500 ${
+          focused ? "border-black/25 shadow-[0_16px_44px_-16px_rgba(0,0,0,0.28)]" : "border-black/10 shadow-[0_8px_30px_-16px_rgba(0,0,0,0.18)]"
         } ${step === 2 ? "justify-end" : ""}`}
       >
-        <span className="text-[15px] leading-relaxed text-[#E0E0E0]">
+        <span className="text-[15px] leading-relaxed text-black/85">
           {typed}
-          <span className="ml-0.5 inline-block h-[1.05em] w-[2px] translate-y-[3px] animate-pulse bg-white/70" />
+          <span className="ml-0.5 inline-block h-[1.05em] w-[2px] translate-y-[3px] animate-pulse bg-black/60" />
         </span>
       </div>
       <div
-        className={`mt-3 rounded-2xl border border-white/[0.07] bg-white/[0.02] px-5 py-4 transition-all duration-700 ${
+        className={`mt-3 rounded-2xl border border-black/[0.08] bg-[#F7F7F5] px-5 py-4 transition-all duration-700 ${
           showAnswer ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
         }`}
       >
-        <p className="text-[13px] font-medium tracking-wide text-[#00F6FF]">Alfie</p>
-        <p className="mt-2 text-[15px] leading-relaxed text-white/90">{demoScript[step].a}</p>
+        <p className="text-[13px] font-medium tracking-wide text-[#03484B]">Alfie</p>
+        <p className="mt-2 text-[15px] leading-relaxed text-black/75">{demoScript[step].a}</p>
       </div>
-      <p className="mt-3 text-[13px] text-white/90">Coming soon.</p>
+      <p className="mt-3 text-[13px] text-black/50">Coming soon.</p>
     </div>
   );
 }
